@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
+  }
 
   // },
   // {
@@ -21,7 +21,6 @@ const routes: Routes = [
   // {
   //   path: '**',
   //   component: HomeComponent
-
 ];
 
 @NgModule({

@@ -21,9 +21,10 @@ if (process.env.NODE_ENV === 'production'){
 //   );
 //   });
 
-app.get('*',(req, res) => {
-    res.sendFile(path.resolve(__dirname, 'disc', 'eventvariete-front', 'index.html'));
-});
+app.get('/*', function(req,res) {
+    
+    res.sendFile(path.join(__dirname+'/dist/eventvariete-front/index.html'));
+    });
 
 app.listen(process.env.PORT || 8080);
 

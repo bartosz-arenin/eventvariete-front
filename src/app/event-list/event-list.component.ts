@@ -14,6 +14,6 @@ export class EventListComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.httpClient.get<[Event]>("http://localhost:8080/").subscribe(response => {this.events = response});
+    this.httpClient.get<[Event]>("https://eventvariete.herokuapp.com/").subscribe(response => {this.events = response});
   }
 }

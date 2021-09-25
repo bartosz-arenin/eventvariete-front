@@ -9,10 +9,24 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/eventvariete-front'));
+if (process.env.NODE_ENV === 'production'){
+    //set static folder
+    app.use(express.static('dist/eventvariete-front'));
+} else {
+    app.use(express.static('./dist/eventvariete-front'));
+}
 
-app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: '/dist/eventvariete-front/'}
-  );
-  });
+// app.get('*', function(req, res) {
+//     res.sendFile('index.html', {root: '/dist/eventvariete-front/'}
+//   );
+//   });
+
+app.get('*',(req, res) => {
+    res.sendFile(path.resolve(__dirname, 'disc', 'eventvariete-front', 'index.html'));
+});
+
 app.listen(process.env.PORT || 8080);
+
+
+
+

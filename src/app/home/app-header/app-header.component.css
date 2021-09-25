@@ -1,0 +1,12 @@
+.app-header{
+    background-color:rebeccapurple;
+    height: 20px;
+    padding: 30px;
+    font-size:22px;
+    font-weight: bold;
+    color: white;
+}
+
+a{
+    color: white
+}

@@ -1,17 +1,20 @@
-<p>event-list works!</p>
-
-
-<table class="table" style="Padding: 10px; color: red">
-    <tr>
-        <td>id</td>
+<table class="table">
+    <tr class=table_header>
+        <td>Id</td>
         <td>Nazwa</td>
         <td>Opis</td>
         <td>Miasto</td>
+        <td>Od kiedy</td>
+        <td>Do kiedy</td>
+        <td>Typ eventu</td>
     </tr>
     <tr *ngFor="let event of events">
         <td>{{event.id}}</td>
         <td>{{event.name}}</td>
         <td>{{event.description}}</td>
         <td>{{event.city}}</td>
+        <td>{{event.eventStartDate}}</td>
+        <td>{{event.eventEndDate}}</td>
+        <td>{{event.typeOfEvent}}</td>
     </tr>
 </table>

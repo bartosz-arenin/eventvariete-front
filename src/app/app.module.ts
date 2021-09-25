@@ -7,12 +7,14 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 import { EventListComponent } from './event-list/event-list.component';
 import { HomeComponent } from './home/home.component';
+import { AppHeaderComponent } from './home/app-header/app-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
-    HomeComponent
+    HomeComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,

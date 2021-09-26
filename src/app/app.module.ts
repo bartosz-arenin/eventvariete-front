@@ -18,33 +18,27 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
-@NgModule({
-  imports: [
-   …
-   ChartsModule,
-   BrowserAnimationsModule,
-   LayoutModule,
-   MatToolbarModule,
-   MatButtonModule,
-   MatSidenavModule,
-   MatIconModule,
-   MatListModule,
-   …
-],
-  declarations: [NavComponent]
-})
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
     HomeComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
+       BrowserAnimationsModule,
+       LayoutModule,
+       MatToolbarModule,
+       MatButtonModule,
+       MatSidenavModule,
+       MatIconModule,
+       MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

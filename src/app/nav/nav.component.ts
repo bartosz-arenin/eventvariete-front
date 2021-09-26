@@ -19,6 +19,6 @@ export class NavComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   // addded informacion about elements in our dashboard
-  menuItems = ['dashboard', ’events', 'add Events', 'remove Event']:
+  menuItems = [ 'events', 'add Events', 'remove Event'];
 
 }

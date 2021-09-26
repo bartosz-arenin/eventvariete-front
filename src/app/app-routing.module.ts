@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'eventlist',
+    path: 'events',
     component: EventListComponent
   },
   {

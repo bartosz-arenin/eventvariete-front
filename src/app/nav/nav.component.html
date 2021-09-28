@@ -7,8 +7,9 @@
     <mat-nav-list>
       <a mat-list-item routerLink="hone">Home</a>
       <a mat-list-item routerLink="home">Top 5 Events</a>
+      <a mat-list-item routerLink="addEvent">add Events</a>
           </mat-nav-list>
-    <a *ngFor="let item of menuItems" mat-list-item [routerLink]="'/'+item"> {{item | titlecase}} </a>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">

@@ -22,3 +22,4 @@ export class NavComponent {
   menuItems = [ 'events', 'add Events', 'remove Event'];
 
 }
+

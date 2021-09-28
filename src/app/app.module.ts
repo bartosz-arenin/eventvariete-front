@@ -17,6 +17,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { AddEventComponent } from './add-event/add-event.component';
+import { DateTableComponent } from './date-table/date-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -25,7 +30,9 @@ import { MatListModule } from '@angular/material/list';
     EventListComponent,
     HomeComponent,
     AppHeaderComponent,
-    NavComponent
+    NavComponent,
+    AddEventComponent,
+    DateTableComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,9 @@ import { MatListModule } from '@angular/material/list';
        MatSidenavModule,
        MatIconModule,
        MatListModule,
+       MatTableModule,
+       MatPaginatorModule,
+       MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

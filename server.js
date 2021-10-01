@@ -12,7 +12,7 @@ app.use(requireHTTPS);
 app.use(express.static('./dist/eventvariete-front'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: './dist/eventvariete-front/'}
+    res.sendFile('index.html', {root: 'dist/eventvariete-front/'}
   );
   });
 

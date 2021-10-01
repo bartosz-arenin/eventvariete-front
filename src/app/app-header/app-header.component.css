@@ -1,0 +1,31 @@
+a {
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+}
+a:hover{
+    color:grey;
+}
+
+#logo {
+    width: 200px;
+    top: 15px;
+    position: relative;
+    float: left;
+}
+
+#header_link_events, #header_link_contact {
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: 15px;
+    float: left;
+}
+
+#header_link_events {
+    left: 500px;
+}
+
+#header_link_contact {
+    left: 500px;
+}

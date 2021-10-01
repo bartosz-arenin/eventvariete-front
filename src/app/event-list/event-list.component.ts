@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from "../shared/models/event.model";
-import { HttpClient } from "@angular/common/http";
 import { EventService } from '../event.service';
 
 @Component({
@@ -15,8 +14,11 @@ export class EventListComponent implements OnInit {
   constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
+
     this.eventService.getAll().subscribe((events:[Event]) => {
       this.events = events;
     });
+  
+  
   }
 }

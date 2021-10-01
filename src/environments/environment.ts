@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //backendUrl:'http://localhost:8080/',
-  backendUrl:'https://eventvariete.herokuapp.com/'
+  backendUrl:'http://localhost:8080/',
+  //backendUrl:'https://eventvariete.herokuapp.com/'
 };
 
 /*

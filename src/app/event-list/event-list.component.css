@@ -5,3 +5,14 @@ tr.table_header {
 td {
     padding: 10px
 }
+
+a{
+    color:chocolate
+}
+
+.eventBox {
+    background-color: #eeeeee; 
+    padding: 16px; 
+    border: 1px solid #dddddd; 
+    margin: 5px;
+}

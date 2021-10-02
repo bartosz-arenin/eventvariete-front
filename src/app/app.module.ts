@@ -11,7 +11,6 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { PanelComponent } from './panel/panel.component';
 import { ContactComponent } from './contact/contact.component';
-import { EventsComponent } from './panel/events/events.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { EventDetailsComponent } from './event-details/event-details.component';
     AppFooterComponent,
     PanelComponent,
     ContactComponent,
-    EventsComponent,
     EventDetailsComponent
   ],
   imports: [

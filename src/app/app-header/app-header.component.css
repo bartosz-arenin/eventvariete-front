@@ -13,7 +13,7 @@ a:hover{
     float: left;
 }
 
-#header_link_events, #header_link_contact {
+#header_link_events, #header_link_contact, #header_link_panel {
     font-size: 16px;
     width: 150px;
     height: 50px;
@@ -23,9 +23,13 @@ a:hover{
 }
 
 #header_link_events {
-    left: 500px;
+    left: 400px;
 }
 
 #header_link_contact {
-    left: 500px;
+    left: 400px;
+}
+
+#header_link_panel {
+    left: 380px;
 }

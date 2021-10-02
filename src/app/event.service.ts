@@ -15,8 +15,8 @@ export class EventService {
       return this.httpClient.get<[Event]>(environment.backendUrl + '/events', {headers:  contentHeaders})
     }
 
-    getById(id: number): Observable<[Event]> {
-      return this.httpClient.get<[Event]>(environment.backendUrl + '/events/'+id, {headers:  contentHeaders})
+    getById(id: number): Observable<Event> {
+      return this.httpClient.get<Event>(environment.backendUrl + '/events/'+id, {headers:  contentHeaders})
     }
 
     delete(id: number): Observable<[Event]> {

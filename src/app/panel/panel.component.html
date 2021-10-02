@@ -1,2 +1,17 @@
-<p>panel works!</p>
-<app-events></app-events>
+<form action="/events" method="delete">
+<table id="listingTable">
+<tr>
+    <th id="column1">Zaznacz</th>
+    <th id="column2">Nazwa wydarzenia</th>
+    <th id="column3">Operacja</th>
+</tr>
+    <tr *ngFor="let event of events">
+        <td id="column1"><input type="checkbox" name="eventID" value="{{event.id}}"></td>
+        <td id="column2"><a href="/events/{{event.id}}">{{event.name}}</a></td>
+        <td id="column3">
+            <input type="button" value="Edytuj" style="width: 100px" (click)="editEvent(event.id)">
+            &nbsp;
+            <input type="button" value="Kasuj"  style="width: 100px" (click)="deleteEvent(event.id)">
+        </td>
+    </tr>
+</table>

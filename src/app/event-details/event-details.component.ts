@@ -18,15 +18,13 @@ export class EventDetailsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.sub = this.route.params.subscribe(params => {
+    this.route.params.subscribe(params => {
       
       let id = +params['id']; // (+) converts string 'id' to a number
 
       this.eventService.getById(id).subscribe((event:Event) => {
         this.event = event;
       });
-
-
     });
   }
 }

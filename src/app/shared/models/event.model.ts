@@ -4,8 +4,8 @@ export class Event {
     preview: string;
     description: string;
     city: string;
-    eventStartDate: string;
-    eventEndDate: string;
+    address: string;
+    price: number;
     typeOfEvent: string;
 
     constructor (
@@ -14,8 +14,8 @@ export class Event {
                     preview: string,
                     description: string, 
                     city: string,
-                    eventStartDate: string,
-                    eventEndDate: string,
+                    address: string,
+                    price: number,
                     typeOfEvent: string
                 ) {
 
@@ -24,8 +24,8 @@ export class Event {
         this.preview = preview;
         this.description = description;
         this.city = city;
-        this.eventStartDate = eventStartDate;
-        this.eventEndDate = eventEndDate;
+        this.address = address;
+        this.price = price;
         this.typeOfEvent = typeOfEvent;
     }
 }

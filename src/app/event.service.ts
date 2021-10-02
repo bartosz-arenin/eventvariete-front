@@ -23,7 +23,7 @@ export class EventService {
       return this.httpClient.delete<[Event]>(environment.backendUrl + '/events/'+id, {headers:  contentHeaders})
     }
 
-    create(event: Event): Observable<[Event]> {
-      return this.httpClient.post<[Event]>(environment.backendUrl + '/events', {headers:  contentHeaders})
+    create(event: Event): Observable<Event> {
+      return this.httpClient.post<Event>(environment.backendUrl + '/events', event, {headers:  contentHeaders})
     }
 }

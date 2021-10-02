@@ -1,0 +1,27 @@
+    <label for="name" class="tableHeading">Nazwa wydarzenia: </label>
+    <input type="text" name="name" [(ngModel)]="event.name" id="name">
+    <br>
+    <br>
+    <label for="preview" class="tableHeading">Krótki opis:</label>
+    <textarea rows="6" cols="20" name="preview" [(ngModel)]="event.preview"></textarea>
+    <br>
+    <br>
+    <label for="description" class="tableHeading">Pełny opis:</label>
+    <textarea rows="10" cols="20" name="description" [(ngModel)]="event.description"></textarea>
+    <br>
+    <br>
+    <label for="address">Adres: </label>
+    <input type="text" name="address" [(ngModel)]="event.address">
+    <br>
+    <br>
+    <label for="city">Miasto:</label>
+    <input type="text" name="city" [(ngModel)]="event.city">
+    <br>
+    <br>
+    <label for="price">Cena:</label>
+    <input type="text" name="price" [(ngModel)]="event.price">
+    <br>
+    <br>
+    <button (click)="submit()" style="width: 150px">Wyślij formularz</button>
+    <br>
+    <br>

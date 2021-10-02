@@ -1,33 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
-
+import { HttpClientModule } from "@angular/common/http";
 import { EventListComponent } from './event-list/event-list.component';
 import { HomeComponent } from './home/home.component';
-import { AppHeaderComponent } from './app-header/app-header.component';
-import { AppFooterComponent } from './app-footer/app-footer.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { PanelComponent } from './panel/panel.component';
 import { ContactComponent } from './contact/contact.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
+import { PanelFormComponent } from './panel-form/panel-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
     HomeComponent,
-    AppHeaderComponent,
-    AppFooterComponent,
+    HeaderComponent,
+    FooterComponent,
     PanelComponent,
     ContactComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    PanelFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

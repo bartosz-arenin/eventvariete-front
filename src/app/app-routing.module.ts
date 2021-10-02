@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { PanelComponent } from './panel/panel.component';
+import { PanelFormComponent } from './panel-form/panel-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,14 @@ const routes: Routes = [
   {
     path: 'panel',
     component: PanelComponent
+  },
+  {
+    path: 'panel/form',
+    component: PanelFormComponent
+  },
+  {
+    path: 'panel/form/:id',
+    component: PanelFormComponent
   },
   {
     path: 'contact',

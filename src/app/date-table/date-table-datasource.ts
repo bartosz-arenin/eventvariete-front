@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { HttpClient } from  '@angular/common/http';
+import { Event } from "../shared/models/event.model";
 
 // TODO: Replace this with your own data model type
 export interface DateTableItem {
@@ -17,9 +19,9 @@ export interface DateTableItem {
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DateTableItem[] = [
-  {id: 1, name: 'Kurs SDA',opis: 'coś tam', Miasto: 'warszawa', Od_kiedy: '2020-01-10', Do_kiedy: '2020-01-12', Typ_Eventu:'CONCERT'},
-  {id: 2, name: 'Kurs PHYTON',opis: 'ktoś tam 2',Miasto: 'warszawa', Od_kiedy: '2020-01-10', Do_kiedy: '2020-01-12',Typ_Eventu:'CONCERT'},
-  {id: 3, name: 'Kurs MS Office',opis: 'coś tam 4',Miasto: 'warszawa', Od_kiedy: '2020-01-10', Do_kiedy: '2020-01-12',Typ_Eventu:'CONCERT'},
+  {id: 1, name: 'Kurs SDA',opis: 'coś tam', Miasto: 'warszawa', Od_kiedy: '202-01-10', Do_kiedy: '2020-01-12', Typ_Eventu:'CONCERT'},
+  {id: 2, name: 'Kurs PHYTON',opis: 'ktoś tam 2',Miasto: 'Lódz', Od_kiedy: '2020-01-11', Do_kiedy: '2020-01-12',Typ_Eventu:'ANOTHER'},
+  {id: 3, name: 'Kurs MS Office',opis: 'coś tam 4',Miasto: 'Kraków ', Od_kiedy: '2020-01-12', Do_kiedy: '2020-01-13',Typ_Eventu:'CONCERT'},
 
 
 ];
@@ -30,14 +32,29 @@ const EXAMPLE_DATA: DateTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class DateTableDataSource extends DataSource<DateTableItem> {
-  data: DateTableItem[] = EXAMPLE_DATA;
+  data: DateTableItem[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
-
-  constructor() {
+// w konstruktorze tzreba jako argument dodać http:HttpClient, następnie stworzyć metodę zwracającą
+//(w moim przypadku calą listę Eventów)
+  constructor(private http:HttpClient) {
     super();
   }
+findEventsList(){
+this.http.get<[Event]>("https://eventvariete.herokuapp.com/events").subscribe(events=>
+{ events.forEach(event=>{
+this.data.push({name: event.name,
+                        id: event.id ,
+                        opis: event.description,
+                        Miasto: event.city,
+                        Od_kiedy: event.eventStartDate,
+                        Do_kiedy: event.eventEndDate,
+                        Typ_Eventu: event.typeOfEvent,})})
 
+
+}
+);
+}
   /**
    * Connect this data source to the table. The table will only update when
    * the returned stream emits new items.
@@ -89,6 +106,10 @@ export class DateTableDataSource extends DataSource<DateTableItem> {
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'Miasto': return compare(a.Miasto, b.Miasto, isAsc);
+        case 'Od_kiedy': return compare(a.Od_kiedy, b.Od_kiedy, isAsc);
+        case 'Do_kiedy': return compare(a.Do_kiedy, b.Do_kiedy, isAsc);
+        case 'Typ_Eventu': return compare(a.Typ_Eventu, b.Typ_Eventu, isAsc);
         default: return 0;
       }
     });

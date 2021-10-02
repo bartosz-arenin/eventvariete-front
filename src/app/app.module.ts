@@ -33,6 +33,7 @@ import { MatSortModule } from '@angular/material/sort';
     NavComponent,
     AddEventComponent,
     DateTableComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { Event } from "../shared/models/event.model";
 import { HttpClient } from "@angular/common/http";
 

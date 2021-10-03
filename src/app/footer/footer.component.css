@@ -1,11 +1,21 @@
 #footer {
-    width:940px;
+    width:1000px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    height: 140px;
+    height: 50px;
     border: 1px black;
-    font-size: 12px
+    font-size: 22px;
+    bottom: 0px;
+}
+footer p {
+    padding:15px 0 0;
+}
+
+#wrapper {
+    width:1000px;
+    margin:0 auto;
+    min-height:calc(100% - 50px);
 }
 
 a {

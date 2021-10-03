@@ -24,6 +24,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule}  from "@angular/forms"
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { LoginComponent } from './login/login.component';
     AddEventComponent,
     DateTableComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+
 
   ],
   imports: [
@@ -54,6 +57,7 @@ import { LoginComponent } from './login/login.component';
        MatTableModule,
        MatPaginatorModule,
        MatSortModule,
+       FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

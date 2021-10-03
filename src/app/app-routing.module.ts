@@ -8,6 +8,10 @@ import { PanelFormComponent } from './panel-form/panel-form.component';
 
 const routes: Routes = [
   {
+    path: 'events:sortBy:orderBy:category',
+    component: EventListComponent
+  },
+  {
     path: 'events',
     component: EventListComponent
   },

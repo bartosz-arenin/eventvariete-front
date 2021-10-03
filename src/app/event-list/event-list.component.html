@@ -1,8 +1,51 @@
+<div class=event-list-filterbox>
+<div class="event-list-filter">
+   <a href="/events?category=online">ONLINE</a>  
+</div>
+<div class="event-list-filter">
+    CONCERT
+</div>
+<div class="event-list-filter">
+    THEATRE
+</div>
+<div class="event-list-filter">
+    CINEMA
+</div>
+<div class="event-list-filter">
+    EXHIBITION
+</div>
+<div class="event-list-filter">
+    PARTY
+</div>
+<div class="event-list-filter">
+    FESTIVAL
+</div>
+<div class="event-list-filter">
+    GASTRO
+</div>
+<div class="event-list-filter">
+    FORKIDS
+</div>
+<div class="event-list-filter">
+    OTHER
+</div>
+<div class="event-list-sort">Sortuj po: 
+    <select [(ngModel)]="value" (change)="change()">
+        <option value="name_desc">Nazwa - malejąco</option>
+        <option value="name_asc">Nazwa + rosnąco</option>
+        <option value="price_desc">Cena - malejąco</option>
+        <option value="price_asc">Cena + rosnąco</option>
+        <option value="date_asc">Data - malejąco</option>
+        <option value="date_desc">Data + rosnąco</option>
+    </select>
+</div>
+</div>
 <div *ngFor="let event of events"  class="eventBox">
     <div id="event_picture" style="float:left;">Obrazek</div>
     <div id="event_content">
         <a href="/events/{{event.id}}" style="font-weight: bold">{{event.name}}</a><br>
         {{event.preview}}
+        {{event.typeOfEvent}}
     </div>
 </div>
 

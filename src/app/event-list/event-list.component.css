@@ -12,7 +12,39 @@ a{
 
 .eventBox {
     background-color: #eeeeee; 
-    padding: 16px; 
+    padding: 10px; 
     border: 1px solid #dddddd; 
     margin: 5px;
+    width: 100%;
+}
+
+select {
+    width: 200px;
+}
+
+.event-list-sort {
+    padding: 5px;
+    width: 100%;
+    text-align: right;
+}
+
+.event-list-filter {
+    font-size: 12px;
+    width: 60px;
+    text-align: center;
+    background-color: #eeeeee; 
+    padding: 10px; 
+    border: 1px solid #dddddd; 
+    margin: 5px;
+    float: left;
+}
+
+.event-list-filter:hover {
+    background-color: #aaaaaa; 
+ 
+}
+
+.event-list-filterbox {
+    width: 100%;
+    padding: 10px;
 }

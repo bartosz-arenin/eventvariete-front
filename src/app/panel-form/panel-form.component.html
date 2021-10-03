@@ -1,25 +1,31 @@
-    <label for="name" class="tableHeading">Nazwa wydarzenia: </label>
-    <input type="text" name="name" [(ngModel)]="event.name" id="name">
+    <label class="tableHeading">Nazwa wydarzenia: 
+    <input type="text" [(ngModel)]="event.name" id="name"></label>
     <br>
     <br>
-    <label for="preview" class="tableHeading">Krótki opis:</label>
-    <textarea rows="6" cols="20" name="preview" [(ngModel)]="event.preview"></textarea>
+    <label class="tableHeading">Krótki opis:
+    <textarea rows="6" cols="20" [(ngModel)]="event.preview"></textarea></label>
     <br>
     <br>
-    <label for="description" class="tableHeading">Pełny opis:</label>
-    <textarea rows="10" cols="20" name="description" [(ngModel)]="event.description"></textarea>
+    <label class="tableHeading">Pełny opis:
+    <textarea rows="10" cols="20" [(ngModel)]="event.description"></textarea></label>
     <br>
     <br>
-    <label for="address">Adres: </label>
-    <input type="text" name="address" [(ngModel)]="event.address">
+    <label >Adres: 
+    <input type="text" [(ngModel)]="event.address"></label>
     <br>
     <br>
-    <label for="city">Miasto:</label>
-    <input type="text" name="city" [(ngModel)]="event.city">
+    <label >Miasto:
+    <input type="text" [(ngModel)]="event.city"></label>
     <br>
     <br>
-    <label for="price">Cena:</label>
-    <input type="text" name="price" [(ngModel)]="event.price">
+    <label >Cena:
+    <input type="text" [(ngModel)]="event.price"></label>
+    <br>
+    <br>
+    <label >Typ wydarzenia:
+    <select [(ngModel)]="event.typeOfEvent" required>
+        <option *ngFor="let typeOfEvent of typeOfEvents" [value]="typeOfEvent" [selected]="typeOfEvent == event.typeOfEvent">{{typeOfEvent}}</option>
+    </select></label>
     <br>
     <br>
     <button (click)="submit()" style="width: 150px">Wyślij formularz</button>

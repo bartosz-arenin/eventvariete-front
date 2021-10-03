@@ -10,17 +10,32 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class PanelFormComponent implements OnInit {
 
-  event = new Event(0, "", "", "", "", "", 0, "")
+  event = new Event(0, "", "", "", "", "", 0, "ONLINE")
+  typeOfEvents = [
+    'ONLINE',
+    'CONCERT',
+    'THEATRE',
+    'CINEMA',
+    'EXHIBITION',
+    'PARTY',
+    'FESTIVAL',
+    'GASTRONOMY',
+    'FORKIDS',
+    'OTHER'
+  ]
 
   constructor(private eventService: EventService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     
     this.route.params.subscribe(params => {
-      
+      console.log("W środku route")
       let id = +params['id']; // (+) converts string 'id' to a number
-      this.eventService.getById(id).subscribe((event:Event) => {
-        this.event = event})
+
+      if (!isNaN(id)) {
+        this.eventService.getById(id).subscribe((event:Event) => {
+          this.event = event})
+        }
     }
     )}
   

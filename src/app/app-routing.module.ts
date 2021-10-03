@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { EventListComponent } from './event-list/event-list.component';
 import { HomeComponent } from './home/home.component';
 import { AddEventComponent } from './add-event/add-event.component';
+import { DateTableComponent} from './date-table/date-table.component';
+import { ContactComponent} from './contact/contact.component';
+import { LoginComponent} from './login/login.component';
 
 const routes: Routes = [
  {
@@ -11,11 +14,19 @@ const routes: Routes = [
   },
   {
     path: 'eventlist',
-    component: EventListComponent
+    component: DateTableComponent
   },
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+     path: 'login',
+     component: LoginComponent
   },
   {
     path: '',

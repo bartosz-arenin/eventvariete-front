@@ -36,7 +36,7 @@ export class DateTableDataSource extends DataSource<DateTableItem> {
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 // w konstruktorze tzreba jako argument dodać http:HttpClient, następnie stworzyć metodę zwracającą
-//(w moim przypadku calą listę Eventów)
+//(w moim przypadku calą listę Eventów) to jest metoda findEventsList która zwraca http.get
   constructor(private http:HttpClient) {
     super();
   }

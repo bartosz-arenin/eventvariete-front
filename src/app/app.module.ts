@@ -22,6 +22,8 @@ import { DateTableComponent } from './date-table/date-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { MatSortModule } from '@angular/material/sort';
     AppHeaderComponent,
     NavComponent,
     AddEventComponent,
-    DateTableComponent
+    DateTableComponent,
+    ContactComponent,
+    LoginComponent
 
   ],
   imports: [
